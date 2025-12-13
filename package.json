@@ -9,5 +9,9 @@
   "author": "dev@previred.com",
   "devDependencies": {
     "json-server": "^0.17.4"
+  },
+  "dependencies": {
+    "antd": "^6.1.0",
+    "axios": "^1.13.2"
   }
 }
