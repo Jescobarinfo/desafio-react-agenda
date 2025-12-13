@@ -48,7 +48,7 @@ import React, { useState } from 'react';
       <Drawer
         title="Agregar nuevo Contacto"
         placement="right"
-        width={500}
+        width={window.innerWidth < 768 ? '100%' : 500}
         onClose={handleClose}
         open={visible}
         extra={

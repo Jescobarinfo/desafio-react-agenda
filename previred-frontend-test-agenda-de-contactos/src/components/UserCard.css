@@ -65,3 +65,24 @@
   .delete-icon:hover {
     color: #ff4d4f;
   }
+   @media (max-width: 768px) {
+    .user-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-info {
+      width: 100%;
+    }
+
+    .user-description {
+      width: 100%;
+      padding: 8px 0;
+    }
+
+    .user-actions {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
