@@ -64,27 +64,40 @@
   ### Estructura del Proyecto
 
   desafio-react-agenda/
-  ├── previred-frontend-test-agenda-de-contactos/    # Aplicación React
-  │   ├── src/
-  │   │   ├── components/          # Componentes React
-  │   │   │   ├── UserList.jsx    # Lista principal
-  │   │   │   ├── UserCard.jsx    # Tarjeta de usuario
-  │   │   │   └── AddUserDrawer.jsx # Drawer formulario
-  │   │   ├── hooks/              # Custom Hooks
-  │   │   │   ├── useUsers.js     # Lógica CRUD usuarios
-  │   │   │   ├── usePagination.js # Lógica paginación
-  │   │   │   └── useSearch.js    # Búsqueda con debounce
-  │   │   ├── context/            # Context API
-  │   │   │   └── UserContext.jsx # Estado global
-  │   │   ├── services/           # Servicios API
-  │   │   │   └── api.js         # Cliente HTTP
-  │   │   ├── App.jsx
-  │   │   └── main.jsx
-  │   ├── package.json
-  │   └── vite.config.js
-  ├── db.json              # Base de datos JSON
-  ├── server.js           # Servidor API
-  └── package.json
+  ├── db.json                    # Base de datos JSON
+  ├── server.js                  # Servidor API backend
+  ├── package.json              # Dependencias backend
+  ├── README.md                 # Documentación principal
+  │
+  └── previred-frontend-test-agenda-de-contactos/
+      ├── public/
+      ├── src/
+      │   ├── components/
+      │   │   ├── UserList.jsx
+      │   │   ├── UserList.css
+      │   │   ├── UserCard.jsx
+      │   │   ├── UserCard.css
+      │   │   └── AddUserDrawer.jsx
+      │   │
+      │   ├── hooks/
+      │   │   ├── useUsers.js
+      │   │   ├── usePagination.js
+      │   │   └── useSearch.js
+      │   │
+      │   ├── context/
+      │   │   └── UserContext.jsx
+      │   │
+      │   ├── services/
+      │   │   └── api.js
+      │   │
+      │   ├── App.jsx
+      │   ├── App.css
+      │   ├── main.jsx
+      │   └── index.css
+      │
+      ├── vite.config.js
+      ├── package.json
+      └── README.md
 
   ### Patrones Implementados
 
