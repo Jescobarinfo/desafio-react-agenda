@@ -1,222 +1,259 @@
- # Previred Frontend Test - Agenda de Contactos
+# Previred Frontend Test - Agenda de Contactos
 
-  Solución completa del desafío técnico de Frontend React para Previred.
+Solución completa del desafío técnico de Frontend React para Previred.
 
-  ## 👨‍💻 Información del Candidato
+## 👨‍💻 Información del Candidato
 
-  - **Nombre:** Johan Sebastian Escobar Acosta
-  - **Email:** jescobar.acosta@outlook.com
-  - **Cargo:** Desarrollador React
-  - **Fecha de entrega:** Diciembre 2025
+- **Nombre:** Johan Sebastian Escobar Acosta
+- **Email:** jescobar.acosta@outlook.com
+- **Cargo:** Desarrollador React
+- **Fecha de entrega:** Diciembre 2025
 
-  ---
+---
 
-  ## 📋 Descripción del Proyecto
+## 📋 Descripción del Proyecto
 
-  Aplicación web para gestionar una agenda de contactos laborales con las siguientes funcionalidades:
+Aplicación web para gestionar una agenda de contactos laborales con las siguientes funcionalidades:
 
-  ### ✅ Funcionalidades Implementadas
+### ✅ Funcionalidades Implementadas
 
-  1. **Lista de Usuarios Paginada**
-     - Visualización de 10 usuarios por página
-     - Navegación entre páginas con controles
-     - Diseño en grid con avatar, nombre y descripción
+1. **Lista de Usuarios Paginada**
+   - Visualización de 10 usuarios por página
+   - Navegación entre páginas con controles
+   - Diseño en grid con avatar, nombre y descripción
 
-  2. **Buscador en Tiempo Real**
-     - Búsqueda por nombre de usuario
-     - Debounce optimizado (500ms)
-     - Filtrado automático de resultados
+2. **Buscador en Tiempo Real**
+   - Búsqueda por nombre de usuario
+   - Debounce optimizado (500ms)
+   - Filtrado automático de resultados
 
-  3. **Agregar Contactos**
-     - Drawer lateral para formulario
-     - Validación de campos obligatorios
-     - Validación de formato de URL para fotos
-     - Envío por AJAX a la API
+3. **Agregar Contactos**
+   - Drawer lateral para formulario
+   - Validación de campos obligatorios
+   - Validación de formato de URL para fotos
+   - Envío por AJAX a la API
 
-  4. **Eliminar Contactos**
-     - Confirmación antes de eliminar
-     - Actualización automática de la lista
+4. **Eliminar Contactos**
+   - Confirmación antes de eliminar
+   - Actualización automática de la lista
 
-  5. **Manejo de Errores**
-     - Mensajes específicos por tipo de error
-     - Control de excepciones en todas las operaciones
-     - Feedback visual al usuario
+5. **Manejo de Errores**
+   - Mensajes específicos por tipo de error
+   - Control de excepciones en todas las operaciones
+   - Feedback visual al usuario
 
-  ---
+---
 
-  ## 🛠️ Stack Tecnológico
+## 🛠️ Stack Tecnológico
 
-  ### Frontend
-  - **React 18.3.1** - Librería UI (cumple requisito React 17+)
-  - **Vite 7** - Build tool moderno y rápido
-  - **Ant Design 5** - Librería de componentes UI
-  - **Axios 1.7** - Cliente HTTP
-  - **Context API** - Gestión de estado global (valor adicional)
+### Frontend
+- **React 18.3.1** - Librería UI (cumple requisito React 17+)
+  - ⚠️ **Nota de Seguridad**: Se utilizó React 18.3.1 en lugar de React 19 debido a la vulnerabilidad crítica **CVE-2025-55182** que permite ejecución remota de código (RCE) en versiones 19.0, 19.1 y 19.2
+- **Vite 7** - Build tool moderno y rápido
+- **Ant Design 5** - Librería de componentes UI
+- **Axios 1.7** - Cliente HTTP
+- **Context API** - Gestión de estado global (valor adicional)
 
-  ### Backend (Incluido)
-  - **JSON Server** - API REST simulada
-  - **Node.js** - Entorno de ejecución
+### Backend (Incluido)
+- **JSON Server** - API REST simulada
+- **Node.js** - Entorno de ejecución
 
-  ---
+---
 
-  ## 🏗️ Arquitectura y Patrones
+## 🏗️ Arquitectura y Patrones
 
-  ### Estructura del Proyecto
+### Estructura del Proyecto
 
-  desafio-react-agenda/
-  ├── db.json                    # Base de datos JSON
-  ├── server.js                  # Servidor API backend
-  ├── package.json              # Dependencias backend
-  ├── README.md                 # Documentación principal
-  │
-  └── previred-frontend-test-agenda-de-contactos/
-      ├── public/
-      ├── src/
-      │   ├── components/
-      │   │   ├── UserList.jsx
-      │   │   ├── UserList.css
-      │   │   ├── UserCard.jsx
-      │   │   ├── UserCard.css
-      │   │   └── AddUserDrawer.jsx
-      │   │
-      │   ├── hooks/
-      │   │   ├── useUsers.js
-      │   │   ├── usePagination.js
-      │   │   └── useSearch.js
-      │   │
-      │   ├── context/
-      │   │   └── UserContext.jsx
-      │   │
-      │   ├── services/
-      │   │   └── api.js
-      │   │
-      │   ├── App.jsx
-      │   ├── App.css
-      │   ├── main.jsx
-      │   └── index.css
-      │
-      ├── vite.config.js
-      ├── package.json
-      └── README.md
+```
+desafio-react-agenda/
+├── db.json                    # Base de datos JSON
+├── server.js                  # Servidor API backend
+├── package.json              # Dependencias backend
+├── README.md                 # Documentación principal
+│
+└── previred-frontend-test-agenda-de-contactos/
+    ├── public/
+    ├── src/
+    │   ├── components/
+    │   │   ├── UserList.jsx
+    │   │   ├── UserList.css
+    │   │   ├── UserCard.jsx
+    │   │   ├── UserCard.css
+    │   │   └── AddUserDrawer.jsx
+    │   │
+    │   ├── hooks/
+    │   │   ├── useUsers.js
+    │   │   ├── usePagination.js
+    │   │   └── useSearch.js
+    │   │
+    │   ├── context/
+    │   │   └── UserContext.jsx
+    │   │
+    │   ├── services/
+    │   │   └── api.js
+    │   │
+    │   ├── App.jsx
+    │   ├── App.css
+    │   ├── main.jsx
+    │   └── index.css
+    │
+    ├── vite.config.js
+    ├── package.json
+    └── README.md
+```
 
-  ### Patrones Implementados
+### Patrones Implementados
 
-  1. **Custom Hooks** (3 implementados)
-     - `useUsers`: Encapsula toda la lógica CRUD
-     - `usePagination`: Maneja estado de paginación
-     - `useSearch`: Implementa debounce en búsqueda
+1. **Custom Hooks** (3 implementados)
+   - `useUsers`: Encapsula toda la lógica CRUD
+   - `usePagination`: Maneja estado de paginación
+   - `useSearch`: Implementa debounce en búsqueda
 
-  2. **Context API** (Valor Adicional)
-     - Centraliza el estado global
-     - Evita prop drilling
-     - Combina múltiples hooks
+2. **Context API** (Valor Adicional)
+   - Centraliza el estado global
+   - Evita prop drilling
+   - Combina múltiples hooks
 
-  3. **Separation of Concerns**
-     - Componentes solo para UI
-     - Hooks para lógica de negocio
-     - Servicios para llamadas API
+3. **Separation of Concerns**
+   - Componentes solo para UI
+   - Hooks para lógica de negocio
+   - Servicios para llamadas API
 
-  4. **Error Handling**
-     - Try-catch en operaciones async
-     - Mensajes específicos por tipo
-     - Validaciones robustas
+4. **Error Handling**
+   - Try-catch en operaciones async
+   - Mensajes específicos por tipo
+   - Validaciones robustas
 
-  ---
+---
 
-  ## 🚀 Instalación y Ejecución
+## 🚀 Instalación y Ejecución
 
-  ### Requisitos Previos
-  - Node.js >= 4.0.0
-  - npm >= 6.0.0
+### Requisitos Previos
+- Node.js >= 4.0.0
+- npm >= 6.0.0
 
-  ### 1. Clonar el repositorio
+### 1. Clonar el repositorio
 
-  ```bash
-  git clone https://github.com/Jescobarinfo/desafio-react-agenda.git
-  cd desafio-react-agenda
+```bash
+git clone https://github.com/Jescobarinfo/desafio-react-agenda.git
+cd desafio-react-agenda
+```
 
-  2. Ejecutar Backend (API)
+### 2. Ejecutar Backend (API)
 
-  En una terminal:
+En una terminal:
 
-  # Instalar dependencias
-  npm install
+```bash
+# Instalar dependencias
+npm install
 
-  # Iniciar servidor en puerto 9000
-  node server.js
+# Iniciar servidor en puerto 9000
+node server.js
+```
 
-  Servidor disponible en: http://localhost:9000
+Servidor disponible en: http://localhost:9000
 
-  3. Ejecutar Frontend (React)
+### 3. Ejecutar Frontend (React)
 
-  En otra terminal:
+En otra terminal:
 
-  # Navegar a la carpeta del cliente
-  cd previred-frontend-test-agenda-de-contactos
+```bash
+# Navegar a la carpeta del cliente
+cd previred-frontend-test-agenda-de-contactos
 
-  # Instalar dependencias
-  npm install
+# Instalar dependencias
+npm install
 
-  # Iniciar servidor de desarrollo
-  npm run dev
+# Iniciar servidor de desarrollo
+npm run dev
+```
 
-  Aplicación disponible en: http://localhost:5173
+Aplicación disponible en: http://localhost:5173
 
-  ---
-  📡 API Endpoints
+---
 
-  | Método | Ruta           | Descripción              | Parámetros                       |
-  |--------|----------------|--------------------------|----------------------------------|
-  | GET    | /api/users     | Lista todos los usuarios | _page, _limit, q (búsqueda)      |
-  | GET    | /api/users/:id | Obtiene un usuario       | id                               |
-  | POST   | /api/users     | Crea un usuario          | Body: {name, description, photo} |
-  | DELETE | /api/users/:id | Elimina un usuario       | id                               |
+## 📡 API Endpoints
 
-  Ejemplos de uso:
+| Método | Ruta           | Descripción              | Parámetros                       |
+|--------|----------------|--------------------------|----------------------------------|
+| GET    | /api/users     | Lista todos los usuarios | _page, _limit, q (búsqueda)      |
+| GET    | /api/users/:id | Obtiene un usuario       | id                               |
+| POST   | /api/users     | Crea un usuario          | Body: {name, description, photo} |
+| DELETE | /api/users/:id | Elimina un usuario       | id                               |
 
-  # Listar usuarios paginados
-  GET /api/users?_page=1&_limit=10
+### Ejemplos de uso:
 
-  # Buscar usuarios
-  GET /api/users?q=Juan
+```bash
+# Listar usuarios paginados
+GET /api/users?_page=1&_limit=10
 
-  # Crear usuario
-  POST /api/users
-  Content-Type: application/json
-  {
-    "name": "Juan Pérez",
-    "description": "Desarrollador Frontend",
-    "photo": "https://example.com/photo.jpg"
-  }
+# Buscar usuarios
+GET /api/users?q=Juan
 
-  # Eliminar usuario
-  DELETE /api/users/1
+# Crear usuario
+POST /api/users
+Content-Type: application/json
+{
+  "name": "Juan Pérez",
+  "description": "Desarrollador Frontend",
+  "photo": "https://example.com/photo.jpg"
+}
 
-  ---
-  ✨ Características Técnicas Destacadas
+# Eliminar usuario
+DELETE /api/users/1
+```
 
-  Buenas Prácticas
+---
 
-  - ✅ Código documentado con JSDoc
-  - ✅ Componentes reutilizables
-  - ✅ Nombres descriptivos
-  - ✅ Organización clara de carpetas
-  - ✅ Separación de responsabilidades
+## ✨ Características Técnicas Destacadas
 
-  Optimizaciones UX/UI
+### Buenas Prácticas
 
-  - ✅ Debounce en búsqueda (evita llamadas excesivas)
-  - ✅ Loading states visuales
-  - ✅ Scroll al top al cambiar página
-  - ✅ Deshabilitar botones durante loading
-  - ✅ Mensajes de éxito/error claros
-  - ✅ Confirmación antes de eliminar
-  - ✅ Ordenamiento de usuarios (nuevos primero)
+- ✅ Código documentado con JSDoc
+- ✅ Componentes reutilizables
+- ✅ Nombres descriptivos
+- ✅ Organización clara de carpetas
+- ✅ Separación de responsabilidades
 
-  Validaciones
+### Optimizaciones UX/UI
 
-  - ✅ Campos obligatorios en formulario
-  - ✅ Validación de formato URL
-  - ✅ Sanitización de datos
-  - ✅ Manejo de casos edge
+- ✅ Debounce en búsqueda (evita llamadas excesivas)
+- ✅ Loading states visuales
+- ✅ Scroll al top al cambiar página
+- ✅ Deshabilitar botones durante loading
+- ✅ Mensajes de éxito/error claros
+- ✅ Confirmación antes de eliminar
+- ✅ Ordenamiento de usuarios (nuevos primero)
+
+### Validaciones
+
+- ✅ Campos obligatorios en formulario
+- ✅ Validación de formato URL
+- ✅ Sanitización de datos
+- ✅ Manejo de casos edge
+
+---
+
+### Consideraciones de Seguridad
+
+**React 18.3.1 vs React 19**
+
+Se decidió utilizar React 18.3.1 en lugar de React 19 debido a una vulnerabilidad crítica identificada:
+
+- **CVE-2025-55182**: Vulnerabilidad de ejecución remota de código (RCE)
+- **Severidad**: Crítica
+- **Versiones afectadas**: React 19.0, 19.1, 19.2 y frameworks asociados (Next.js)
+- **Impacto**: Permite a atacantes ejecutar código arbitrario en el servidor
+- **Mitigación**: Utilizar React 18.x hasta que se publique un parche oficial
+
+Esta decisión prioriza la seguridad de la aplicación y sus usuarios, manteniendo compatibilidad con los requisitos técnicos (React 17+) sin comprometer la estabilidad del proyecto.
+
+
+
+## 📄 Licencia
+
+Este proyecto fue desarrollado como parte del proceso de selección para Previred.
+
+---
+
 
