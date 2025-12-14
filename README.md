@@ -224,6 +224,7 @@ DELETE /api/users/1
 - ✅ Mensajes de éxito/error claros
 - ✅ Confirmación antes de eliminar
 - ✅ Ordenamiento de usuarios (nuevos primero)
+ -✅ Diseño responsive (móviles, tablets, desktop)
 
 ### Validaciones
 
